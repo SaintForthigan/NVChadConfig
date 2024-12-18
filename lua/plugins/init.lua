@@ -109,6 +109,27 @@ return {
             { "=P", "<Plug>(YankyPutBeforeFilter)", desc = "Put Before Applying a Filter" },
         },
     },
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        lazy = false,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
+    },
+    {
+        "nvim-neotest/neotest",
+        event = "VeryLazy",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+    },
+
     --{
     --    "github/copilot.vim",
     --    lazy = false,

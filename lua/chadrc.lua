@@ -6,12 +6,30 @@
 local M = {}
 
 M.base46 = {
-    theme = "gruvbox",
+    theme = "kanagawa",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
     -- 	["@comment"] = { italic = true },
     -- },
+    hl_override = {
+        Normal = {
+            bg = "NONE",
+        },
+        StatusLine = {
+            bg = "NONE",
+        },
+        SignColumn = {
+            bg = "NONE",
+        },
+        -- Comprehensive NvimTree transparency
+        --NvimTreeNormal = {
+        --    bg = "NONE",
+        --},
+        --NvimTreeNormalNC = { -- Non-current window
+        --    bg = "NONE",
+        --},
+    },
 }
 
 return M

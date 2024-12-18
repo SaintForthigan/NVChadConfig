@@ -16,6 +16,8 @@ local options = {
         },
     },
 
+    timeout_ms = 3000,
+
     format_on_save = {
         -- These options will be passed to conform.format()
         timeout_ms = 2000,
