@@ -11,11 +11,10 @@ local options = {
     formatters = {
         ["clang-format"] = {
             prepend_args = {
-                "--style={IndentWidth: 4, TabWidth: 4, UseTab: Never, AccessModifierOffset: -4, BreakBeforeBraces: Allman, ColumnLimit: 80, IndentAccessModifiers: true, PackConstructorInitializers: Never}",
+                "--style={IndentWidth: 4, TabWidth: 4, UseTab: Never, AccessModifierOffset: -4, BreakBeforeBraces: Allman, ColumnLimit: 80, IndentAccessModifiers: false, PackConstructorInitializers: Never, IndentCaseLabels: false, IndentPPDirectives: None, AlignConsecutiveDeclarations: false, AlignConsecutiveAssignments: true, AlignConsecutiveMacros: {Enabled: true, AcrossEmptyLines: false, AcrossComments: true}, PointerAlignment: Left}",
             },
         },
     },
-
     timeout_ms = 3000,
 
     format_on_save = {
