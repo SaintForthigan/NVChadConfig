@@ -49,6 +49,7 @@ lspconfig.lua_ls.setup({
     },
 })
 
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
 lspconfig.clangd.setup({
     on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -56,7 +57,11 @@ lspconfig.clangd.setup({
         on_attach(client, bufnr)
     end,
     on_init = on_init,
-    capabilities = capabilities,
+    capabilities = cmp_nvim_lsp.default_capabilities(),
+    cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+    },
 })
 
 lspconfig.omnisharp.setup({

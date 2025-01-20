@@ -11,7 +11,7 @@ local options = {
     formatters = {
         ["clang-format"] = {
             prepend_args = {
-                "--style={IndentWidth: 4, TabWidth: 4, UseTab: Never, AccessModifierOffset: -4, BreakBeforeBraces: Allman, ColumnLimit: 80, IndentAccessModifiers: false, PackConstructorInitializers: Never, IndentCaseLabels: false, IndentPPDirectives: None, AlignConsecutiveDeclarations: false, AlignConsecutiveAssignments: true, AlignConsecutiveMacros: {Enabled: true, AcrossEmptyLines: false, AcrossComments: true}, PointerAlignment: Left}",
+                "--style={IndentWidth: 4, TabWidth: 4, UseTab: Never, AccessModifierOffset: -4, BreakBeforeBraces: Allman, ColumnLimit: 100, IndentAccessModifiers: false, PackConstructorInitializers: Never, IndentCaseLabels: false, IndentPPDirectives: None, AlignConsecutiveDeclarations: false, AlignConsecutiveAssignments: true, AlignConsecutiveMacros: {Enabled: true, AcrossEmptyLines: false, AcrossComments: true}, PointerAlignment: Left}",
             },
         },
     },

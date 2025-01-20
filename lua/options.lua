@@ -14,3 +14,6 @@ o.number = true
 
 --concealing for obsidian
 o.conceallevel = 2
+
+--Shell settings
+o.shell = "pwsh.exe"
