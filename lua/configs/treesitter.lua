@@ -15,6 +15,8 @@ local options = {
         "c_sharp",
         "make",
         "cmake",
+        "python",
+        "rust",
     },
 
     highlight = {

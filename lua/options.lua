@@ -16,4 +16,4 @@ o.number = true
 o.conceallevel = 2
 
 --Shell settings
-o.shell = "pwsh.exe"
+--o.shell = "pwsh.exe"

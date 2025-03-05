@@ -117,6 +117,7 @@ return {
             -- your configuration comes here
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
+            -- TODO: Add some custom keywords here to highlight debug variables to strip out
         },
     },
     {
@@ -127,40 +128,6 @@ return {
             "nvim-lua/plenary.nvim",
             "antoinemadec/FixCursorHold.nvim",
             "nvim-treesitter/nvim-treesitter",
-        },
-    },
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*", -- recommended, use latest release instead of latest commit
-        lazy = true,
-        ft = "markdown",
-        -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-        -- event = {
-        --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-        --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-        --   -- refer to `:h file-pattern` for more examples
-        --   "BufReadPre path/to/my-vault/*.md",
-        --   "BufNewFile path/to/my-vault/*.md",
-        -- },
-        dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-
-            -- see below for full list of optional dependencies 👇
-        },
-        opts = {
-            workspaces = {
-                --{
-                --    name = "personal",
-                --    path = "~/vaults/personal",
-                --},
-                {
-                    name = "work",
-                    path = "C:/Users/ebarron/Documents/Erik's Local TCI Notes",
-                },
-            },
-
-            -- see below for full list of options 👇
         },
     },
     {
@@ -176,25 +143,30 @@ return {
             -- See below for full list of options 👇
         },
     },
-
     {
-        "github/copilot.vim",
-        lazy = false,
-        config = function() -- Mapping tab is already used in NvChad
-            vim.g.copilot_no_tab_map = true -- Disable tab mapping
-            vim.g.copilot_assume_mapped = true -- Assume that the mapping is already done
-        end,
+        "mrcjkb/rustaceanvim",
+        version = "^5", -- Recommended
+        lazy = false, -- This plugin is already lazy
     },
-    {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        lazy = false,
-        dependencies = {
-            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-        },
-        opts = {
-            -- See Configuration section for options
-        },
-        -- See Commands section for default commands if you want to lazy load on them
-    },
+    --
+    --    {
+    --        "github/copilot.vim",
+    --        lazy = false,
+    --        config = function() -- Mapping tab is already used in NvChad
+    --            vim.g.copilot_no_tab_map = true -- Disable tab mapping
+    --            vim.g.copilot_assume_mapped = true -- Assume that the mapping is already done
+    --        end,
+    --    },
+    --    {
+    --        "CopilotC-Nvim/CopilotChat.nvim",
+    --        lazy = false,
+    --        dependencies = {
+    --            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+    --            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    --        },
+    --        opts = {
+    --            -- See Configuration section for options
+    --        },
+    --        -- See Commands section for default commands if you want to lazy load on them
+    --    },
 }

@@ -9,10 +9,12 @@ lspconfig.servers = {
     "lua_ls",
     "clangd",
     "omnisharp",
+    "pyright",
+    --"rust_analyzer",
 }
 
 -- list of servers configured with default config.
-local default_servers = {}
+local default_servers = { "pyright" }
 
 -- lsps with default config
 for _, lsp in ipairs(default_servers) do
