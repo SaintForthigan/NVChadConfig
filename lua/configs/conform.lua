@@ -5,7 +5,7 @@ local options = {
         cpp = { "clang-format" },
         cs = { "csharpier" },
         python = { "isort", "black" },
-        rust = { "rustfmt" },
+        --rust = { "rustfmt" },
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
@@ -30,11 +30,11 @@ local options = {
                 "black",
             },
         },
-        rustfmt = {
-            prepend_args = {
-                "--edition=2021", -- You can specify Rust edition here
-            },
-        },
+        -- rustfmt = {
+        --     prepend_args = {
+        --         "--edition=2021", -- You can specify Rust edition here
+        --     },
+        -- },
     },
     timeout_ms = 3000,
 

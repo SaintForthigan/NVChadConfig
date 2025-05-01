@@ -10,7 +10,6 @@ lspconfig.servers = {
     "clangd",
     "omnisharp",
     "pyright",
-    --"rust_analyzer",
 }
 
 -- list of servers configured with default config.

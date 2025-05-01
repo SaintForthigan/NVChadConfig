@@ -109,17 +109,17 @@ return {
             { "=P", "<Plug>(YankyPutBeforeFilter)", desc = "Put Before Applying a Filter" },
         },
     },
-    {
-        "folke/todo-comments.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-        lazy = false,
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-            -- TODO: Add some custom keywords here to highlight debug variables to strip out
-        },
-    },
+    --{
+    --    "folke/todo-comments.nvim",
+    --    dependencies = { "nvim-lua/plenary.nvim" },
+    --    lazy = false,
+    --    opts = {
+    --        -- your configuration comes here
+    --        -- or leave it empty to use the default settings
+    --        -- refer to the configuration section below
+    --        -- TODO: Add some custom keywords here to highlight debug variables to strip out
+    --    },
+    --},
     {
         "nvim-neotest/neotest",
         event = "VeryLazy",
@@ -148,25 +148,25 @@ return {
         version = "^5", -- Recommended
         lazy = false, -- This plugin is already lazy
     },
-    --
-    --    {
-    --        "github/copilot.vim",
-    --        lazy = false,
-    --        config = function() -- Mapping tab is already used in NvChad
-    --            vim.g.copilot_no_tab_map = true -- Disable tab mapping
-    --            vim.g.copilot_assume_mapped = true -- Assume that the mapping is already done
-    --        end,
-    --    },
-    --    {
-    --        "CopilotC-Nvim/CopilotChat.nvim",
-    --        lazy = false,
-    --        dependencies = {
-    --            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-    --            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-    --        },
-    --        opts = {
-    --            -- See Configuration section for options
-    --        },
-    --        -- See Commands section for default commands if you want to lazy load on them
-    --    },
+
+    {
+        "github/copilot.vim",
+        lazy = false,
+        config = function() -- Mapping tab is already used in NvChad
+            vim.g.copilot_no_tab_map = true -- Disable tab mapping
+            vim.g.copilot_assume_mapped = true -- Assume that the mapping is already done
+        end,
+    },
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        lazy = false,
+        dependencies = {
+            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+        },
+        opts = {
+            -- See Configuration section for options
+        },
+        -- See Commands section for default commands if you want to lazy load on them
+    },
 }
